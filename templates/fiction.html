@@ -1,11 +1,35 @@
 {% extends "layout.html" %}
 {% block content %}
-<header>
-  <img src="/static/good-reads-logo.png" alt="">
-</header>
 <div class="container">
   <h1>Fiction Novels</h1>
+  <br>
+  <div class="row">
+    <div class="col-4">
+      <div class="card" style="width:18rem;">
+        <a href="/book1">
+          <img src="/static/mystery1.jpg" class="card-img-top" alt="...">
+        </a>
+      </div>
+    </div>
 
+    <div class="col-4">
+      <div class="card" style="width:18rem;">
+        <a href="/book2">
+          <img src="/static/mystery2.jpg" class="card-img-top" alt="...">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card" style="width:18rem;">
+        <a href="/book3">
+          <img src="/static/mystery3.jpg" class="card-img-top" alt="...">
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <br>
   <p><a href="/index">Back To Home</a></p>
 </div>
 {% endblock %}

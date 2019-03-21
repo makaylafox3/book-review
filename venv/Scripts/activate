@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\mfox3\Documents\GitHub\book-review\venv"
+VIRTUAL_ENV="C:\Users\mfox3\Documents\GitHub\book\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
