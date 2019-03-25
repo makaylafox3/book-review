@@ -1,24 +1,34 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container">
-  <h1>Meet your next favorite book!</h1>
-  <hr>
-  <h2>Deciding what to read next?</h2>
-  <p>You’re in the right place. Tell us what titles or genres you’ve
-  enjoyed in the past, and we’ll give you surprisingly
-  insightful recommendations.</p>
-  <hr>
-  <h2>What are your friends reading?</h2>
-  <p>Chances are your friends are discussing their
-  favorite (and least favorite) books on Goodreads.</p>
-  <hr>
-  <h2>Are you and author or a publisher?</h2>
-  <p>Gain access to a massive audience of more than 85 million book lovers.
-  Goodreads is a great place to promote your books.</p>
-  <hr>
-  <h2>Browse Books</h2>
-  <p><a href="/mysteries">Mystery Novels</a></p>
-  <p><a href="/fiction">Fiction Novels</a></p>
-  <p><a href="/romance">Romance Novels</a></p>
+  <h1>Fiction Novels</h1>
+  <br>
+  <div class="row">
+    <div class="col-4">
+      <div class="card" style="width:14rem;">
+        <a href="/book4">
+          <img src="/static/fiction1.jpg" class="card-img-top" alt="...">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card" style="width:14rem;">
+        <a href="/book5">
+          <img src="/static/fiction2.jpg" class="card-img-top" alt="...">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card" style="width:14rem;">
+        <a href="/book6">
+          <img src="/static/fiction3.jpg" class="card-img-top" alt="...">
+        </a>
+      </div>
+    </div>
+  </div>
+  <br>
+  <p><a href="/index">Back To Home</a></p>
 </div>
 {% endblock %}

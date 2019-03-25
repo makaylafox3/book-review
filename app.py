@@ -46,5 +46,17 @@ def book5():
 def book6():
     return render_template('book6.html')
 
+@app.route('/book7')
+def book7():
+    return render_template('book7.html')
+
+@app.route('/book8')
+def book8():
+    return render_template('book8.html')
+
+@app.route('/book9')
+def book9():
+    return render_template('book9.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
