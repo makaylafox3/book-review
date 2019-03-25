@@ -1,24 +1,66 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container">
-  <h1>Meet your next favorite book!</h1>
+  <center><h1>Meet your next favorite book!</h1></center>
+  <br>
   <hr>
-  <h2>Deciding what to read next?</h2>
-  <p>You’re in the right place. Tell us what titles or genres you’ve
-  enjoyed in the past, and we’ll give you surprisingly
-  insightful recommendations.</p>
+  <br>
+  <div class="list-group">
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Deciding what to read next?</h5>
+      </div>
+      <p class="mb-1">You’re in the right place. Tell us what titles or genres you’ve
+      enjoyed in the past, and we’ll give you surprisingly
+      insightful recommendations.</p>
+    </div>
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">What are your friends reading?</h5>
+      </div>
+      <p class="mb-1">Chances are your friends are discussing their
+      favorite (and least favorite) books on Goodreads.</p>
+    </div>
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Are you and author or a publisher?</h5>
+      </div>
+      <p class="mb-1">Gain access to a massive audience of more than 85 million book lovers.
+      Goodreads is a great place to promote your books.</p>
+    </div>
+  </div>
+  <br>
   <hr>
-  <h2>What are your friends reading?</h2>
-  <p>Chances are your friends are discussing their
-  favorite (and least favorite) books on Goodreads.</p>
-  <hr>
-  <h2>Are you and author or a publisher?</h2>
-  <p>Gain access to a massive audience of more than 85 million book lovers.
-  Goodreads is a great place to promote your books.</p>
-  <hr>
-  <h2>Browse Books</h2>
-  <p><a href="/mysteries">Mystery Novels</a></p>
-  <p><a href="/fiction">Fiction Novels</a></p>
-  <p><a href="/romance">Romance Novels</a></p>
+  <h2 id="browse">Browse Books</h2>
+  <div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Mystery Novels</h5>
+        <p class="card-text">Click the button to find mystery books!</p>
+        <a href="/mysteries" class="btn btn-primary">Go!</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Fiction Novels</h5>
+        <p class="card-text">Click the button to find fiction books!</p>
+        <a href="/fiction" class="btn btn-primary">Go!</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Romance Novels</h5>
+        <p class="card-text">Click the button to find romance books!</p>
+        <a href="/romance" class="btn btn-primary">Go!</a>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
 </div>
 {% endblock %}
