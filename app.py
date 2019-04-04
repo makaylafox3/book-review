@@ -1,6 +1,34 @@
-from flask import Flask, render_template
+import sqlite3
+import datetime
+from flask import Flask, render_template, g, request, redirect, url_for
+
+PATH = 'db/bookData.db'
 
 app = Flask(__name__)
+
+def open_connection():
+    connection = getattr(g, '_connection', None)
+    if connection == None:
+        connection = g._connection = sqlite3.connect(PATH)
+    connection.row_factory = sqlite3.Row
+    return connection
+
+def execute_sql(sql, values=(), commit=False, single=False):
+    connection = open_connection()
+    cursor = connection.execute(sql, values)
+    if commit == True:
+        results = connection.commit()
+    else:
+        results = cursor.fetchone() if single else cursor.fetchall()
+
+    cursor.close()
+    return results
+
+@app.teardown_appcontext
+def close_connection(exception):
+    connection = getattr(g, '_connection', None)
+    if connection is not None:
+        connection.close()
 
 @app.route('/')
 
@@ -11,14 +39,17 @@ def welcome():
 #genre routes
 @app.route('/mysteries')
 def mysteries():
-    return render_template('mysteries.html')
+    mys = execute_sql('SELECT mystery.mys_title, mystery.mys_author, mystery.mys_description FROM mystery')
+    return render_template('mysteries.html', mys=mys)
 
 @app.route('/fiction')
 def fiction():
-    return render_template('fiction.html')
+    fic = execute_sql('SELECT fiction.fict_title, fiction.fict_author, fiction.fict_description FROM fiction')
+    return render_template('fiction.html', fic=fic)
 
 @app.route('/romance')
 def romance():
+    rom = execute_sql('SELECT romance.rom_title, romance.rom_author, romance.rom_description FROM romance')
     return render_template('romance.html')
 
 #book routes
