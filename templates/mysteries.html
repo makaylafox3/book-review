@@ -2,8 +2,16 @@
 {% block content %}
 <div class="container">
   <h1>Mystery Novels</h1>
+  <br>
+  {{ show_mysterys(mysterys) }}
+  <p>{{ mys['mys_title'] }}</p>
 
-  <div class="row">
+<!-- <p>{{ mys.title }}</p>
+<p>{{ mys.author }}</p>
+<p>{{ mys.description }}</p> -->
+
+
+  <!-- <div class="row">
     <div class="col-4">
       <div class="card" style="width:14rem;">
         <a href="/book1">
@@ -27,7 +35,7 @@
         </a>
       </div>
     </div>
-  </div>
+  </div> -->
   <br>
   <p><a href="/index#browse">Back To Home</a></p>
 </div>
