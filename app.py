@@ -39,7 +39,7 @@ def welcome():
 #genre routes
 @app.route('/mysteries')
 def mysteries():
-    mys = execute_sql('SELECT mystery.mys_id, mystery.mys_title, mystery.mys_author, mystery.mys_description FROM mystery')
+    mys = execute_sql('SELECT * FROM mysterys')
     return render_template('mysteries.html', mys=mys)
     # mystery_details = {
     #     'title': 'Murder At The Palace',
