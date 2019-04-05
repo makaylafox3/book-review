@@ -1,5 +1,6 @@
-
 {% from '_macros.html' import show_mystery, show_mysterys with context %}
+{% from '_macros.html' import show_fiction, show_fictions with context %}
+{% from '_macros.html' import show_romance, show_romances with context %}
 <!doctype html>
 <html>
 <head>
@@ -12,7 +13,6 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
   <header>
     <img src="/static/good-reads-logo.png" alt="">
   </header>
-  <br>
   <div class="content">
     {% block content %}
     {% endblock %}

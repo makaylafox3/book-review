@@ -41,23 +41,16 @@ def welcome():
 def mysteries():
     mysterys = execute_sql('SELECT * FROM mysterys')
     return render_template('mysteries.html', mysterys=mysterys)
-    # mystery_details = {
-    #     'title': 'Murder At The Palace',
-    #     'author': 'by Margaret Dumas',
-    #     'description': "Welcome to the Palace movie theater! Now Showing: Philandering husbands, ghostly sidekicks, and a murder or two. When Nora Paige's movie-star leaves her for his latest co-star, she flees Hollywood to take refuge in San Francisco."
-    # }
-    # mys = execute_sql('SELECT mystery.mys_id, mystery.mys_title, mystery.mys_author, mystery.mys_description FROM mystery')
-    # return render_template('mysteries.html', mys=mystery_details)
 
 @app.route('/fiction')
 def fiction():
-    fic = execute_sql('SELECT fiction.fict_id, fiction.fict_title, fiction.fict_author, fiction.fict_description FROM fiction')
-    return render_template('fiction.html', fic=fic)
+    fictions = execute_sql('SELECT * FROM fictions')
+    return render_template('fiction.html', fictions=fictions)
 
 @app.route('/romance')
 def romance():
-    rom = execute_sql('SELECT romance.rom_id, romance.rom_title, romance.rom_author, romance.rom_description FROM romance')
-    return render_template('romance.html', rom=rom)
+    romances = execute_sql('SELECT * FROM romances')
+    return render_template('romance.html', romances=romances)
 
 
 if __name__ == '__main__':

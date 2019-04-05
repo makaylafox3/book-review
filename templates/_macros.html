@@ -1,17 +1,11 @@
 {% macro show_mystery(mysterys) %}
-<div class="card adjust-height">
- <div class="card-content">
-   <div class="content">
-     <h1>
-       <!-- <a href="{{ url_for('mysterys', job_id=job['id']) }}">{{ job['title'] }}</a> -->
-       <!-- mysterys['mys_title'] -->
-       <!-- ${{ mysterys['mys_title'] }}<br>
-       ${{ mysterys['mys_author'] }}<br>
-       ${{ mysterys['mys_description'] }} -->
-     </h1>
-   </div>
- </div>
-</div>
+  <b style="font-size: 21px;">{{ mysterys['mys_title'] }}</b>
+  <br>
+  {{ mysterys['mys_author'] }}
+  <br>
+  {{ mysterys['mys_description'] }}
+  <br>
+  <br>
 {% endmacro %}
 
 
@@ -19,7 +13,55 @@
 <div>
  {% for mystery in mysterys %}
  <div>
-   {{ show_mystery(mysterys) }}
+   {{ show_mystery(mystery) }}
+ </div>
+ {% endfor %}
+</div>
+{% endmacro %}
+
+
+
+
+{% macro show_fiction(fictions) %}
+  <b style="font-size: 21px;">{{ fictions['fict_title'] }}</b>
+  <br>
+  {{ fictions['fict_author'] }}
+  <br>
+  {{ fictions['fict_description'] }}
+  <br>
+  <br>
+{% endmacro %}
+
+
+{% macro show_fictions(fictions) %}
+<div>
+ {% for fiction in fictions %}
+ <div>
+   {{ show_fiction(fiction) }}
+ </div>
+ {% endfor %}
+</div>
+{% endmacro %}
+
+
+{% macro show_romance(romances) %}
+  <b style="font-size: 21px;">{{ romances['rom_title'] }}</b>
+  <br>
+  {{ romances['rom_author'] }}
+  <br>
+  {{ romances['rom_description'] }}
+  <br>
+  <br>
+{% endmacro %}
+
+
+
+
+{% macro show_romances(romances) %}
+<div>
+ {% for romance in romances %}
+ <div>
+   {{ show_romance(romance) }}
  </div>
  {% endfor %}
 </div>

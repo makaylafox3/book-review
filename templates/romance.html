@@ -1,34 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
+<br>
 <div class="container">
-  <h1>Fiction Novels</h1>
-
-  <!-- <div class="row">
-    <div class="col-4">
-      <div class="card" style="width:14rem;">
-        <a href="/book7">
-          <img src="/static/romance1.jpg" class="card-img-top" alt="...">
-        </a>
-      </div>
-    </div>
-
-    <div class="col-4">
-      <div class="card" style="width:14rem;">
-        <a href="/book8">
-          <img src="/static/romance2.jpg" class="card-img-top" alt="...">
-        </a>
-      </div>
-    </div>
-
-    <div class="col-4">
-      <div class="card" style="width:14rem;">
-        <a href="/book9">
-          <img src="/static/romance3.jpg" class="card-img-top" alt="...">
-        </a>
-      </div>
-    </div>
-  </div> -->
+  <h1>Romance Novels</h1>
   <br>
+    {{ show_romances(romances) }}
   <p><a href="/index#browse">Back To Home</a></p>
 </div>
 {% endblock %}
